@@ -1,6 +1,5 @@
 .App {
-  text-align: center;
-  background: white;
+  background: whitesmoke;
   overflow: auto;
 }
 
@@ -10,25 +9,45 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items:stretch;
+  align-items: stretch;
 }
 
-
 .App-header {
+  text-align: center;
   height: 150px;
   padding-top: 100px;
   display: flex;
   flex-direction: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(30px + 2vmin);
   color: white;
-  background-color: #282c34;
+  background-color: #4285f4;
+}
+
+.App-banner {
+  background: white;
 }
 
 .App-body {
-  background: #ddd;
+  background: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Section-header {
+  background: #b7d1ff;
+  padding: 20px;
+  margin: 0;
+  color: #025eec;
+}
+
+.del-btn {
+  background: white;
+  border: 2px solid silver;
+  border-radius: 10px;
+  margin-left: 5px;
+  color: silver;
+  cursor: pointer;
 }

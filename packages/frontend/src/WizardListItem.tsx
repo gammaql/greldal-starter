@@ -27,6 +27,7 @@ const WizardListItem = (props: {
                 <li>
                   {accomplishment.title}
                   <button
+                    className="del-btn"
                     onClick={e => {
                       props.deleteAccomplishment({
                         variables: {
