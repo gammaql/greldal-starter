@@ -1,4 +1,10 @@
 {
+	"name": "greldal-cra-starter",
+	"private": true,
+	"workspaces": [
+		"backend",
+		"frontend"
+	],
 	"devDependencies": {
 		"lerna": "^2.5.1"
 	}
