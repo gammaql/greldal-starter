@@ -1,0 +1,11 @@
+query getAllWizards {
+  findManyWizards(where: {}) {
+    id
+    name
+    age
+    accomplishments {
+      id
+      title
+    }
+  }
+}

@@ -1,0 +1,5 @@
+mutation deleteAccomplishment($id: ID!) {
+  deleteOneAccomplishment(where: { id: $id }) {
+    id
+  }
+}

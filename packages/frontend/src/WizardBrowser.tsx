@@ -1,96 +1,61 @@
 import React from "react";
-import { gql } from "apollo-boost";
-import { Query, Mutation } from "react-apollo";
-
-const GET_ALL_WIZARDS = gql`
-  query {
-    findManyWizards(where: {}) {
-      id
-      name
-      age
-      accomplishments {
-        id
-        title
-      }
-    }
-  }
-`;
-
-const REMOVE_ACCOMPLISHMENT = gql`
-  mutation removeAccomplishment($id: ID!) {
-    deleteOneAccomplishment(where: { id: $id }) {
-      id
-    }
-  }
-`;
+import {
+  GetAllWizardsComponent,
+  GetAllWizardsDocument,
+  DeleteAccomplishmentComponent,
+  DeleteAccomplishmentMutation,
+  GetAllWizardsQuery
+} from "./generated/graphql";
+import { DataProxy } from "apollo-cache";
+import { MutationUpdaterFn } from "apollo-boost";
+import WizardListItem from "./WizardListItem";
 
 const WizardBrowser = () => {
   return (
     <div style={{ textAlign: "left", padding: "0 20px" }}>
       <h1>Greatest Wizards of All Times</h1>
-      <Query query={GET_ALL_WIZARDS}>
-        {({ loading, error, data: { findManyWizards: wizards } }) => {
+      <GetAllWizardsComponent>
+        {({ loading, error, data }) => {
           if (loading) return <div>Loading...</div>;
           if (error) return <div>Error :(</div>;
+          const { findManyWizards: wizards } = data!;
           return (
-            <Mutation 
-              mutation={REMOVE_ACCOMPLISHMENT}
-              update={(cache, {data: {deleteOneAccomplishment: {id}}}) => {
-                const result: any = cache.readQuery({query: GET_ALL_WIZARDS});
-                const newResult = {
-                  findManyWizards: result.findManyWizards.map((wizard: any) => ({
-                    ...wizard,
-                    accomplishments: wizard.accomplishments.filter((a: any) => a.id !== id)
-                  }))
-                }
-                cache.writeQuery({
-                  query: GET_ALL_WIZARDS,
-                  data: newResult
-                })
-              }}
-            >
-              {(removeAccomplishment, { data }) => (
+            <DeleteAccomplishmentComponent update={updateCacheAfterDelete}>
+              {(deleteAccomplishment, { data }) => (
                 <ul>
-                  {wizards.map((wizard: any) => (
-                    <li>
-                      <h2>
-                        {wizard.name} ({wizard.age} years old)
-                      </h2>
-                      {wizard.accomplishments.length > 0 && (
-                        <>
-                          <h3> Accomplishments </h3>
-                          <ul>
-                            {wizard.accomplishments.map(
-                              (accomplishment: any) => (
-                                <li>
-                                  {accomplishment.title}
-                                  <button
-                                    onClick={e => {
-                                      removeAccomplishment({
-                                        variables: {
-                                          id: accomplishment.id
-                                        }
-                                      });
-                                    }}
-                                  >
-                                    Remove
-                                  </button>
-                                </li>
-                              )
-                            )}
-                          </ul>
-                        </>
-                      )}
-                    </li>
+                  {wizards!.map((wizard) => wizard && (
+                    <WizardListItem {...{wizard, deleteAccomplishment}} />
                   ))}
                 </ul>
               )}
-            </Mutation>
+            </DeleteAccomplishmentComponent>
           );
         }}
-      </Query>
+      </GetAllWizardsComponent>
     </div>
   );
 };
 
 export default WizardBrowser;
+
+const updateCacheAfterDelete: MutationUpdaterFn<
+  DeleteAccomplishmentMutation
+> = (cache: DataProxy, { data }) => {
+  const id =
+    data && data.deleteOneAccomplishment && data.deleteOneAccomplishment.id;
+  if (!id) return;
+  const result = cache.readQuery<GetAllWizardsQuery>({
+    query: GetAllWizardsDocument
+  });
+  if (!result || !result.findManyWizards) return;
+  const newResult = {
+    findManyWizards: result.findManyWizards.map((wizard) => ({
+      ...wizard,
+      accomplishments: (wizard!.accomplishments!).filter((a) => a && a.id !== id)
+    }))
+  };
+  cache.writeQuery({
+    query: GetAllWizardsDocument,
+    data: newResult
+  });
+};

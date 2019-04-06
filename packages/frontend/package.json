@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@graphql-codegen/introspection": "^1.0.6",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.0",
     "@types/react": "16.8.12",
@@ -19,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "graphql:codegen": "graphql-codegen --config codegen.yml"
   },
   "proxy": "http://localhost:4000",
   "eslintConfig": {
@@ -32,6 +34,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.0.6",
+    "@graphql-codegen/typescript": "1.0.6",
+    "@graphql-codegen/typescript-operations": "1.0.6",
+    "@graphql-codegen/typescript-react-apollo": "1.0.6",
     "@types/inquirer": "^6.0.0",
     "@types/js-yaml": "^3.12.1",
     "@types/rx": "^4.1.1"
