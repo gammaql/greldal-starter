@@ -1,6 +1,6 @@
-# greldal-cra-starter
+# greldal-starter
 
-This is a bare-bones application which you can use a starting point for a full-stack GraphQL based application powered by Node.js, React and GRelDAL.
+This is a bare-bones application which you can use a starting point for a full-stack [GraphQL](https://graphql.org/) based application powered by [Node.js](https://nodejs.org/), [React](https://reactjs.org/) and [GRelDAL](https://github.com/gql-dal/greldal).
 
 This repository follows a mono-repo structure, with two packages: frontend and backend.
 
