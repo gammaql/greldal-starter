@@ -1,5 +1,5 @@
 {
-	"name": "greldal-cra-starter",
+	"name": "greldal-starter",
 	"private": true,
 	"workspaces": [
 		"backend",
@@ -7,5 +7,9 @@
 	],
 	"devDependencies": {
 		"lerna": "^2.5.1"
+	},
+	"scripts": {
+		"bootstrap": "lerna run bootstrap",
+		"build": "lerna run build"
 	}
 }
