@@ -4,7 +4,7 @@ This is a bare-bones application which you can use a starting point for a full-s
 
 While this starter application is quite a bit more opinionated than GRelDAL itself, it eliminates the need to spend hours integrating small utilities before you can get started with the application logic.
 
-This repository follows a monorepo structure (managed using [lerna](https://github.com/lerna/lerna)), with two packages: frontend and backend.
+This repository follows a monorepo structure (managed using [lerna](https://github.com/lerna/lerna)), with two packages: frontend and backend, both written in TypeScript.
 
 ## Backend
 
@@ -55,6 +55,8 @@ yarn run start
 
 Now you will have a graphql server running on port 4000.
 
+![GraphiQL IDE](https://raw.githubusercontent.com/gql-dal/greldal-starter/master/assets/graphiql-screenshot.PNG)
+
 You can open `http://localhost:4000/graphql` in your browser and use the [graphiql](https://github.com/graphql/graphiql) in-browser IDE to play around with the API.
 
 In a different terminal:
@@ -66,7 +68,11 @@ yarn run start
 
 You can now open `http://localhost:3000` in a browser. You should see a page like this: 
 
-If you scroll down, there is a tiny example component that talks to your graphql API. 
+![Frontend Example](https://raw.githubusercontent.com/gql-dal/greldal-starter/master/assets/frontend-above-fold.PNG)
+
+If you scroll down, there is a tiny example component that talks to your graphql API. )
+
+![Wizard Explorer Example Application](https://raw.githubusercontent.com/gql-dal/greldal-starter/master/assets/example-frontend.PNG)
 
 Now feel free to go and tinker with your code. On any change, both your server and client will reload and update automatically.
 
