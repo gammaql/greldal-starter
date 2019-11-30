@@ -1,21 +1,25 @@
 {
   "__schema": {
-    "queryType": { "name": "query" },
-    "mutationType": { "name": "mutation" },
+    "queryType": {
+      "name": "query"
+    },
+    "mutationType": {
+      "name": "mutation"
+    },
     "subscriptionType": null,
     "types": [
       {
         "kind": "OBJECT",
         "name": "query",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "findOneWizard",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -28,17 +32,21 @@
                 "defaultValue": null
               }
             ],
-            "type": { "kind": "OBJECT", "name": "Wizard", "ofType": null },
+            "type": {
+              "kind": "OBJECT",
+              "name": "Wizard",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "findManyWizards",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -54,18 +62,22 @@
             "type": {
               "kind": "LIST",
               "name": null,
-              "ofType": { "kind": "OBJECT", "name": "Wizard", "ofType": null }
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Wizard",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "findOneAccomplishment",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -88,11 +100,11 @@
           },
           {
             "name": "findManyAccomplishments",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -126,25 +138,37 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "WizardInput",
-        "description": null,
+        "description": "",
         "fields": null,
         "inputFields": [
           {
             "name": "id",
-            "description": null,
-            "type": { "kind": "SCALAR", "name": "ID", "ofType": null },
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
             "defaultValue": null
           },
           {
             "name": "name",
-            "description": null,
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "defaultValue": null
           },
           {
             "name": "age",
-            "description": null,
-            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
             "defaultValue": null
           }
         ],
@@ -175,7 +199,7 @@
       {
         "kind": "SCALAR",
         "name": "Int",
-        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1. ",
+        "description": "The `Int` scalar type represents non-fractional signed whole numeric values. Int can represent values between -(2^31) and 2^31 - 1.",
         "fields": null,
         "inputFields": null,
         "interfaces": null,
@@ -185,39 +209,51 @@
       {
         "kind": "OBJECT",
         "name": "Wizard",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "ID", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "name",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "age",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "accomplishments",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "AccomplishmentInput",
@@ -247,25 +283,37 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "AccomplishmentInput",
-        "description": null,
+        "description": "",
         "fields": null,
         "inputFields": [
           {
             "name": "id",
-            "description": null,
-            "type": { "kind": "SCALAR", "name": "ID", "ofType": null },
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
             "defaultValue": null
           },
           {
             "name": "title",
-            "description": null,
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "defaultValue": null
           },
           {
             "name": "wizard_id",
-            "description": null,
-            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
+            "description": "",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
             "defaultValue": null
           }
         ],
@@ -276,29 +324,41 @@
       {
         "kind": "OBJECT",
         "name": "Accomplishment",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "ID", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "title",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "wizard_id",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -311,15 +371,15 @@
       {
         "kind": "OBJECT",
         "name": "mutation",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "insertOneAccomplishment",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "entity",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "AccomplishmentInput",
@@ -338,11 +398,11 @@
           },
           {
             "name": "insertManyAccomplishments",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "entities",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "LIST",
                   "name": null,
@@ -369,11 +429,11 @@
           },
           {
             "name": "updateOneAccomplishment",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -387,7 +447,7 @@
               },
               {
                 "name": "update",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -410,11 +470,11 @@
           },
           {
             "name": "updateManyAccomplishments",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -428,7 +488,7 @@
               },
               {
                 "name": "update",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -455,11 +515,11 @@
           },
           {
             "name": "deleteOneAccomplishment",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -482,11 +542,11 @@
           },
           {
             "name": "deleteManyAccomplishments",
-            "description": null,
+            "description": "",
             "args": [
               {
                 "name": "where",
-                "description": null,
+                "description": "",
                 "type": {
                   "kind": "NON_NULL",
                   "name": null,
@@ -520,29 +580,41 @@
       {
         "kind": "OBJECT",
         "name": "ShallowAccomplishment",
-        "description": null,
+        "description": "",
         "fields": [
           {
             "name": "id",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "ID", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "title",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
             "name": "wizard_id",
-            "description": null,
+            "description": "",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "Int",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -588,7 +660,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "OBJECT", "name": "__Type", "ofType": null }
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -597,7 +673,11 @@
             "name": "mutationType",
             "description": "If this server supports mutation, the type that mutation operations will be rooted at.",
             "args": [],
-            "type": { "kind": "OBJECT", "name": "__Type", "ofType": null },
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -605,7 +685,11 @@
             "name": "subscriptionType",
             "description": "If this server support subscription, the type that subscription operations will be rooted at.",
             "args": [],
-            "type": { "kind": "OBJECT", "name": "__Type", "ofType": null },
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -651,7 +735,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "ENUM", "name": "__TypeKind", "ofType": null }
+              "ofType": {
+                "kind": "ENUM",
+                "name": "__TypeKind",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -660,7 +748,11 @@
             "name": "name",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -668,7 +760,11 @@
             "name": "description",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -679,7 +775,11 @@
               {
                 "name": "includeDeprecated",
                 "description": null,
-                "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
                 "defaultValue": "false"
               }
             ],
@@ -709,7 +809,11 @@
               "ofType": {
                 "kind": "NON_NULL",
                 "name": null,
-                "ofType": { "kind": "OBJECT", "name": "__Type", "ofType": null }
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
               }
             },
             "isDeprecated": false,
@@ -725,7 +829,11 @@
               "ofType": {
                 "kind": "NON_NULL",
                 "name": null,
-                "ofType": { "kind": "OBJECT", "name": "__Type", "ofType": null }
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "__Type",
+                  "ofType": null
+                }
               }
             },
             "isDeprecated": false,
@@ -738,7 +846,11 @@
               {
                 "name": "includeDeprecated",
                 "description": null,
-                "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
+                "type": {
+                  "kind": "SCALAR",
+                  "name": "Boolean",
+                  "ofType": null
+                },
                 "defaultValue": "false"
               }
             ],
@@ -782,7 +894,11 @@
             "name": "ofType",
             "description": null,
             "args": [],
-            "type": { "kind": "OBJECT", "name": "__Type", "ofType": null },
+            "type": {
+              "kind": "OBJECT",
+              "name": "__Type",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -873,7 +989,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "String", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -882,7 +1002,11 @@
             "name": "description",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -917,7 +1041,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "OBJECT", "name": "__Type", "ofType": null }
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -929,7 +1057,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Boolean", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -938,7 +1070,11 @@
             "name": "deprecationReason",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -960,7 +1096,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "String", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -969,7 +1109,11 @@
             "name": "description",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -980,7 +1124,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "OBJECT", "name": "__Type", "ofType": null }
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "__Type",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -989,7 +1137,11 @@
             "name": "defaultValue",
             "description": "A GraphQL-formatted string representing the default value for this input value.",
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -1011,7 +1163,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "String", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -1020,7 +1176,11 @@
             "name": "description",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -1031,7 +1191,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Boolean", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -1040,7 +1204,11 @@
             "name": "deprecationReason",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -1062,7 +1230,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "String", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
             },
             "isDeprecated": false,
             "deprecationReason": null
@@ -1071,7 +1243,11 @@
             "name": "description",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -1259,7 +1435,11 @@
       {
         "name": "skip",
         "description": "Directs the executor to skip this field or fragment when the `if` argument is true.",
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
         "args": [
           {
             "name": "if",
@@ -1267,7 +1447,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Boolean", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "defaultValue": null
           }
@@ -1276,7 +1460,11 @@
       {
         "name": "include",
         "description": "Directs the executor to include this field or fragment only when the `if` argument is true.",
-        "locations": ["FIELD", "FRAGMENT_SPREAD", "INLINE_FRAGMENT"],
+        "locations": [
+          "FIELD",
+          "FRAGMENT_SPREAD",
+          "INLINE_FRAGMENT"
+        ],
         "args": [
           {
             "name": "if",
@@ -1284,7 +1472,11 @@
             "type": {
               "kind": "NON_NULL",
               "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Boolean", "ofType": null }
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
+              }
             },
             "defaultValue": null
           }
@@ -1293,12 +1485,19 @@
       {
         "name": "deprecated",
         "description": "Marks an element of a GraphQL schema as no longer supported.",
-        "locations": ["FIELD_DEFINITION", "ENUM_VALUE"],
+        "locations": [
+          "FIELD_DEFINITION",
+          "ENUM_VALUE"
+        ],
         "args": [
           {
             "name": "reason",
             "description": "Explains why this element was deprecated, usually also including a suggestion for how to access supported similar data. Formatted using the Markdown syntax (as specified by [CommonMark](https://commonmark.org/).",
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            },
             "defaultValue": "\"No longer supported\""
           }
         ]

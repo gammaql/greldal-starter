@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
+import WizardBrowser from "./WizardBrowser";
+
+import "./App.css";
 
 // Pass your GraphQL endpoint to uri
 const client = new ApolloClient({ uri: "/graphql" });
-
-import "./App.css";
-import WizardBrowser from "./WizardBrowser";
 
 class App extends Component {
   render() {
